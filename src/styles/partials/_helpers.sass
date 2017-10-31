@@ -1,0 +1,33 @@
+// maxWidth
+=r($width)
+    @media only screen and (max-width: $width+ "px")
+        @content
+
+// minWidth
+=rmin($width)
+    @media only screen and (min-width: $width+ "px")
+        @content
+
+/* ===================================
+	 MEDIA
+	 =================================== */
+=mac
+    +rmin($mac)
+        @content
+
+=desk
+    +rmin($minDesk)
+        @content
+
+=md
+    +r($tab)
+        @content
+
+=sm
+    @media only screen and (max-width: $mob+ "px")
+        @content
+
+=mob-fix
+    @media only screen and (max-width: 767px) and (orientation: landscape)
+        @content
+

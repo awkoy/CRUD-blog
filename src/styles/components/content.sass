@@ -1,0 +1,85 @@
+.page__content
+    max-width: 940px
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    z-index: 1
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05)
+    background: #fff
+    padding: 44px 80px 60px 80px
+    box-sizing: border-box
+    +md
+        padding-left: 40px
+        padding-right: 40px
+        padding-top: 30px
+    &__title
+        font-family: 'Stag-Semibold'
+        margin-top: 0
+        margin-bottom: 12px
+        color: #454545
+        font-size: 30px
+        line-height: 30px
+        position: relative
+        +sm
+            font-size: 24px
+        &:before
+            width: 36px
+            height: 36px
+            position: absolute
+            display: block
+            content: ''
+            background: url('../static/img/star.svg') center center no-repeat
+            left: -57px
+            top: -3px
+        &:after
+            display: block
+            content: ''
+            position: absolute
+            bottom: -7px
+            left: 0
+            right: 0
+            width: 100%
+            height: 2px
+            background: #f2f2f2
+        +md
+            &:before
+                display: none
+    &__date
+        font-size: 15px
+        color: #b6b6b6
+        font-weight: 500
+        line-height: 20px
+        margin-bottom: 10px
+    &__text
+        color: #454545
+        font-size: 17px
+        line-height: 25px
+        letter-spacing: 0.06px
+        text-align: justify
+        margin-bottom: 25px
+        +sm
+            font-size: 14px
+            line-height: 18px
+    &__info
+        border-top: 2px solid #f2f2f2
+        border-bottom: 2px solid #f2f2f2
+        min-height: 58px
+        display: flex
+        align-items: center
+        color: #b6b6b6
+        font-size: 15px
+        +sm
+            font-size: 13px
+            min-height: 35px
+            justify-content: space-between
+            .page__content__info__author
+                width: auto
+            .page__content__info__date
+                display: none
+        &__icon
+            display: inline-block
+            margin-right: 5px
+        &__author
+            width: 200px
+        &__date
+            width: 260px

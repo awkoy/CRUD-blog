@@ -1,0 +1,212 @@
+.main
+    background: #65CCB8
+    height: 100vh
+    position: relative
+    &__container
+        width: 360px
+        height: 500px
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        background: #fff
+        box-shadow: 0px 22px 25px -15px rgba(0, 0, 0, 0.75)
+    &__title
+        text-transform: uppercase
+        text-align: center
+        padding-top: 30px
+        font-family: "Microsoft JhengHei Light"
+        font-weight: 700
+        font-size: 25px
+    &__btn
+        width: 140px
+        height: 50px
+        display: block
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        right: 0
+        margin: auto
+        text-align: center
+        background: #f1c40f
+        text-decoration: none
+        line-height: 50px
+        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.75)
+        color: #f2f2f2
+        font-family: 'Stag-Semibold'
+        letter-spacing: 3px
+        transition: .4s
+        &:hover
+            background: #f1c40f * 1.2
+            color: #f1c40f * 1.2
+            .main__btn__icon
+                color: red
+        &__icon
+            color: #f2f2f2
+            transition: .4s
+    &__technologies
+        width: 100%
+        height: 70px
+        position: absolute
+        bottom: 30px
+        left: 0
+        right: 0
+        background: url('./../static/img/react-redux.png') center center no-repeat
+        background-size: contain
+.page
+    position: relative
+    min-height: 100vh
+    background: #f2f2f2
+    padding-top: 319px
+    +sm
+        padding-top: 180px
+    &__link
+        position: absolute
+        height: 40px
+        top: 0
+        left: 0
+        right: 0
+        background: rgba(#000, 0.85)
+        z-index: 2
+        font-family: 'Stag-Semibold'
+        min-width: 200px
+        +sm
+            height: 30px
+        &__icon
+            position: absolute
+            top: 0
+            bottom: 0
+            margin: auto
+            height: 17px
+        &__item
+            position: absolute
+            height: 100%
+            display: block
+            padding-left: 25px
+            padding-right: 25px
+            line-height: 40px
+            text-decoration: none
+            color: #fff
+            transition: .4s
+            +sm
+                font-size: 0
+                .page__link__icon
+                    font-size: 15px
+            &:hover
+                color: #FFD800
+        &__prev
+            left: 25px
+            .page__link__icon
+                left: 0
+        &__next
+            right: 25px
+            .page__link__icon
+                right: 0
+    &__bg
+        width: 100%
+        height: 400px
+        position: absolute
+        top: 0px
+        right: 0
+        left: 0
+        background-position: top center
+        background-repeat: no-repeat
+        background-size: cover
+        background-image: url(./../static/img/pagebg.jpg)
+        +sm
+            height: 200px
+        &:after
+            display: block
+            position: absolute
+            content: ''
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 1
+            background: linear-gradient(rgba(#000, 0), rgba(#000, 0.2), rgba(#000, 0.8))
+    &__photo
+        border: 2px solid #ebedee
+        display: inline-block
+        margin-right: 25px
+        width: 91px
+        height: 91px
+        box-sizing: border-box
+        border-radius: 7px
+        position: relative
+        vertical-align: top
+        overflow: hidden
+        &:after
+            width: 89px
+            height: 89px
+            border-radius: 7px
+            box-sizing: border-box
+            top: -1px
+            left: -1px
+            margin: auto
+            content: ''
+            display: block
+            position: absolute
+            z-index: 2
+            border: 3px solid #fff
+        +sm
+            width: 60px
+            height: 60px
+            margin-bottom: 10px
+        img
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+            margin: auto
+            min-width: 100%
+            min-height: 100%
+            z-index: 1
+    &__textarea
+        width: 100%
+        border: 2px solid #ebedee
+        box-sizing: border-box
+        border-radius: 7px
+        height: 90px
+        outline: none
+        margin-bottom: 5px
+        padding: 16px
+        font-family: 'Stag-Book'
+        font-size: 17px
+        box-sizing: border-box
+        resize: none
+        +sm
+            font-size: 14px
+            height: 140px
+        &::-webkit-input-placeholder
+            color: #bfbfbf
+        &:focus::-webkit-input-placeholder
+            visibility: hidden
+    &__btn
+        border-radius: 7px
+        display: block
+        border: none
+        width: 143px
+        height: 47px
+        text-align: center
+        background-color: #f1c40f
+        margin-left: auto
+        margin-right: 0
+        color: #454545
+        font-size: 17px
+        font-family: 'Stag-Semibold'
+        letter-spacing: 0.03em
+        font-weight: 500
+        transition: .4s
+        cursor: pointer
+        outline: none
+        +sm
+            font-size: 14px
+            height: 40px
+            width: 120px
+        &:hover
+            background-color: #f1c40f * 1.1

@@ -1,0 +1,220 @@
+.page__comment
+    margin-left: auto
+    margin-right: auto
+    position: relative
+    z-index: 1
+    box-sizing: border-box
+    padding-top: 34px
+    +sm
+        padding-top: 15px
+    &__subinfo
+        display: flex
+        justify-content: space-between
+        margin-bottom: 20px
+        &__item
+            color: #b6b6b6
+            font-size: 15px
+            cursor: pointer
+            transition: .4s
+            &:hover
+                color: #b6b6b6 * 0.8
+    &__subform
+        position: relative
+        margin-bottom: 20px
+        &.error
+            textarea
+                border: 1px solid red
+    &__error
+        font-size: 8px
+        text-transform: uppercase
+        color: red
+        font-family: "Arial Narrow"
+        font-weight: 900
+        letter-spacing: 0.5px
+        position: absolute
+        bottom: 40px
+        left: 5px
+    &__redactor
+        display: flex
+        margin-top: 10px
+        margin-bottom: 20px
+        &__btn
+            font-size: 15px
+            display: inline-block
+            cursor: pointer
+            margin-right: 15px
+            padding-top: 5px
+            padding-bottom: 5px
+            color: #b6b6b6
+            transition: .4s
+            &.active
+                color: #f1c40f
+                &:hover
+                    color: #f1c40f * 1.1
+            &:hover
+                color: #b6b6b6 * 0.6
+    &__title
+        font-family: 'Stag-Semibold'
+        margin-top: 0
+        margin-bottom: 35px
+        color: #454545
+        font-size: 30px
+        line-height: 30px
+        position: relative
+        +sm
+            font-size: 24px
+            margin-bottom: 15px
+    &__more
+        position: relative
+        height: 44px
+        cursor: pointer
+        &:hover
+            &:before
+                background: #FFD800
+            .page__comment__more__btn
+                color: #FFD800
+                border: 2px solid #FFD800
+        &__btn
+            border: 2px solid #f2f2f2
+            background: #ffffff
+            width: 184px
+            height: 44px
+            display: block
+            margin-left: auto
+            margin-right: auto
+            font-size: 17px
+            position: relative
+            cursor: pointer
+            box-sizing: border-box
+            color: #b6b6b6
+            outline: none
+            font-family: 'Stag-Book'
+            transition: .4s
+            &:after
+                position: absolute
+                display: block
+                content: ''
+                width: 114%
+                height: 110%
+                background: #fff
+                left: -7%
+                top: -2%
+                z-index: -1
+        &:before
+            position: absolute
+            display: block
+            content: ''
+            width: 100%
+            height: 2px
+            background: #f2f2f2
+            left: 0
+            right: 0
+            top: 0
+            bottom: 0
+            margin: auto
+            z-index: -1
+            transition: .4s
+    &__text
+        +sm
+            font-size: 14px
+            line-height: 17px
+    &__item
+        display: block
+        position: relative
+        margin-bottom: 25px
+        +sm
+            margin-bottom: 10px
+    &__content
+        display: inline-block
+        width: calc(100% - 116px)
+        padding-top: 5px
+        +sm
+            width: 100%
+    &__info
+        display: flex
+        margin-bottom: 15px
+        +sm
+            flex-wrap: wrap
+            margin-bottom: 10px
+        &__name
+            font-size: 17px
+            color: #454545
+            font-family: 'Stag-Semibold'
+            display: inline-block
+            margin-right: 10px
+            +sm
+                display: block
+                width: 100%
+                margin-bottom: 10px
+        &__icon
+            display: inline-block
+            margin-right: 5px
+            vertical-align: top
+        &__date
+            color: #b6b6b6
+            font-size: 15px
+            letter-spacing: 0.05em
+    &__form
+        position: relative
+        border-bottom: 2px solid #f2f2f2
+        margin-bottom: 35px
+        padding-bottom: 8px
+        &__author
+            +sm
+                display: none
+        &__add
+            display: inline-block
+            width: calc(100% - 116px)
+            padding-top: 2px
+            position: relative
+            +sm
+                width: 100%
+            &.error
+                textarea
+                    border: 1px solid red
+    &__sub
+        +sm
+            width: calc(100% - 50px)
+            margin-right: 0
+            margin-left: auto
+        .page__comment__item
+            margin-bottom: 5px
+            +sm
+                &:after
+                    display: block
+                    width: 10px
+                    height: 10px
+                    position: absolute
+                    content: ''
+                    left: -20px
+                    top: 8px
+                    border-radius: 50%
+                    background: #b6b6b6
+                .page__comment__info__reply, .page__comment__info__date
+                    display: none
+                .page__comment__info__name
+                    margin-bottom: 0
+                .page__comment__redactor
+                    visibility: visible
+                    opacity: 1
+            &:hover
+                .page__comment__redactor
+                    visibility: visible
+                    opacity: 1
+        .page__comment__item:last-child
+            margin-bottom: 0
+        .page__comment__photo
+            width: 60px
+            height: 60px
+            +sm
+                display: none
+        .page__comment__info__reply
+            color: #b6b6b6
+            font-size: 15px
+            margin-right: 10px
+        .page__comment__redactor
+            margin-bottom: 0
+            margin-top: 5px
+            visibility: hidden
+            opacity: 0
+            transition: .4s
