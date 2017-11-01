@@ -49,25 +49,23 @@ const commentsReducer = (state = initialState.comments, action) => {
                     }
                 });
 
-            case DELETE_CHILD_COMMENT:
-                let arr = [];
-                arr = state.map(item => {
-                    // find parent comment
-                    if (item.id === action.payload.parentID) {
-                        let newItem = item;
-                        // delete sub_comment
-                        newItem.children = item.children.filter(function (child) {
-                                if (child.id !== action.payload.id) {
-                                    return item;
-                                } else {
-                                    return false;
-                                }
-                        });
-                        return newItem;
-                    }
-                    return item;
-                });
-                return arr;
+            case DELETE_CHILD_COMMENT:            
+                return state.map((item) => {
+  					// no parent comment found
+  					if (!item.id === action.payload.parentID) return item;
+  					
+  					// parent comment found
+  					let newItem = item;
+  					// delete sub comment
+  					newItem.children = item.children.filter(({ id }) => {
+  					  if (id !== action.payload.id) {
+  					    return item;
+  					  }
+  					  return false;
+  					});
+
+  					return newItem;
+				})
 
             default:
                 return state;
